@@ -1,452 +1,372 @@
 # Laporan Proyek Machine Learning - Sandy Susanto
 
-## Domain Proyek
+## Project Overview
 
-Domain proyek ini akan membahas mengenai permasalahan dalam bidang ekonomi dan bisnis. Fokus pada proyek ini adalah untuk membuat prediksi harga mobil bekas pakai berdasarkan fitur-fitur dan dimiliki oleh kendaraan tersebut.
+Proyek ini membahas literasi digital dan kebutuhan teknologi literatur untuk mendukung akses informasi dalam literasi. 
 
-<img src="https://image.cnbcfm.com/api/v1/image/106961034-16342989482021-10-15t115305z_757712464_rc2baq9ww2kh_rtrmadp_0_usa-economy.jpeg?v=1671462564" alt="Car Market" title="Car Market Illustration" width="100%">
+![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/11936652-62e8-4c2a-8a60-d8618e4f1af4)
 
-Pembelian kendaraan baru merupakan salah investasi finansial yang signifikan bagi sebagian besar institusi maupun individu. Dalam konteks ini, nilai jual kembali kendaraan, yang mencerminkan sebagian dari *return of investment*, menjadi faktor penting dalam proses pengambilan keputusan pembelian. Oleh karena itu, baik konsumen individu maupun perusahaan memiliki kepentingan dalam mengidentifikasi atribut-atribut kendaraan yang dapat mempertahankan nilai jualnya di pasar primer ataupun sekunder [[1]](https://link.springer.com/article/10.1057/jors.2016.16).
+Dalam konteks pendidikan dan kehidupan sehari-hari, literasi secara tradisional diakui sebagai kemampuan dasar membaca dan menulis yang menjadi fondasi pengetahuan masyarakat. Namun, di tengah perubahan zaman yang ditandai dengan digitalisasi, konsep literasi telah mengalami evolusi yang signifikan. Kini, literasi tidak hanya terbatas pada kemampuan literasi konvensional, melainkan juga mencakup keterampilan digital yang meliputi kolaborasi, komunikasi, kewarganegaraan digital, pemecahan masalah, berpikir kritis, dan kreativitas. Keterampilan-keterampilan ini dianggap vital dalam literatur terkini dan menjadi kompetensi esensial bagi tenaga kerja di era digital. Pengajaran keterampilan abad ke-21 ini kepada generasi muda menjadi penting, mengingat tidak semua individu secara otomatis mahir dalam menggunakan teknologi informasi dan komunikasi secara efektif meskipun mereka tumbuh di era digital [[3]](https://link.springer.com/article/10.1007/s10639-021-10451-0#Sec2). 
 
-Menurut data yang dianalisis, ada beberapa hal penting yang sangat mempengaruhi berapa harga mobil bekas nantinya, seperti siapa produsen yang membuat mobilnya, tipe mobil, seberapa jauh mobil itu sudah berjalan, berapa umurnya, riwayat servisnya, bagaimana kondisi mobil secara fisik, seberapa banyak mobil itu terjual di pasaran, bagaimana layanan setelah mobil itu dibeli, dan bagaimana cara pemilik sebelumnya mengendarainya [[2]](https://www.semanticscholar.org/paper/New-Model-for-Residual-Value-Prediction-of-the-Used-Shen-Wang/af9ec65507e1f156d6c1817f92caa9547e5ba61a).
+Peran media baru, khususnya Internet dan media sosial, dalam meningkatkan keterlibatan masyarakat dan pengaruhnya terhadap pemuda, telah menjadi fokus diskusi yang penting. Peningkatan penggunaan media sosial oleh remaja yang sering menggunakan perangkat mobile menunjukkan dampak yang signifikan terhadap prospek demokrasi di masa depan. Studi terkait menunjukkan adanya korelasi positif antara penggunaan media sosial dan tingkat partisipasi, di mana media sosial berperan dalam memfasilitasi keterlibatan melalui jaringan komunikasi dua arah. Penelitian ini mengeksplorasi berbagai dimensi literasi digital sebagai evolusi dari literasi media tradisional, yang dianggap sebagai kerangka kerja yang lebih relevan untuk penelitian tentang pemuda, khususnya dalam konteks pendidikan literasi yang ada di kelas [[1]](https://www.tandfonline.com/doi/full/10.1080/17482798.2020.1728700).
 
-Reputasi yang baik dari penjual dapat sedikit meningkatkan harga yang ditawarkan dalam lelang *online* untuk mobil bekas, terutama jika sudah ada tawaran yang masuk dan peluang untuk terjual. Namun, pengaruhnya tidak sebesar faktor lain seperti kejelasan status kepemilikan atau waktu penutupan lelang. Menariknya, meskipun mobil dipajang dengan menarik dan banyak foto, hal tersebut tidak terlalu berpengaruh terhadap harga akhir atau kesempatan mobil tersebut untuk terjual. Ini cukup mengejutkan karena biasanya presentasi yang baik dianggap penting dalam penjualan *online*, terutama untuk barang yang beragam dan bernilai tinggi seperti mobil [[3]](https://link.springer.com/article/10.1007/s11293-006-9045-7).
+Literasi digital, yang pada awalnya hanya dianjurkan, kini telah menjadi komponen kunci dalam membentuk warga negara yang adaptif di era digital. Meskipun demikian, definisi dan ruang lingkup literasi digital belum distandarisasi dan terus berkembang seiring dengan kemajuan ilmu pengetahuan. Literasi digital kini diinterpretasikan sebagai serangkaian keterampilan yang saling terkait dan diperlukan untuk sukses di dunia digital, dengan penekanan khusus pada pentingnya pendekatan kritis yang berkembang melalui studi literasi media. [[2]](https://www.mdpi.com/2304-6775/8/4/48).
 
-Semua hal ini saling berkaitan dan bersama-sama menentukan harga jual kembali mobil. Jika kita tidak memperhatikan bagaimana semua hal ini saling berhubungan dan hanya menghitung pengaruhnya satu per satu, maka prediksi kita tentang harga mobil bekas tidak akan akurat.
+Pentingnya sistem rekomendasi buku digital terletak pada kemampuannya untuk memfasilitasi penemuan literatur baru dan sumber daya yang relevan, yang secara signifikan meningkatkan keterlibatan dan kepuasan pengguna. Hal ini berkontribusi pada peningkatan pengalaman pembelajaran secara keseluruhan. Lebih lanjut, sistem ini berperan dalam mengatasi penurunan minat baca, khususnya di kalangan generasi muda, dengan menyajikan rekomendasi yang tepat melalui perpustakaan, institusi pendidikan, dan *platform e-learning.* Di tengah berkembangnya ekonomi yang berbasis pengetahuan, literasi digital harus didefinisikan ulang sebagai kumpulan keterampilan dan kompetensi yang saling berkaitan, yang menjadi syarat esensial untuk mencapai kesuksesan di era digital saat ini. [[4]](https://link.springer.com/chapter/10.1007/978-981-99-6062-0_6#rightslink).
 
-Proyek ini akan melibatkan beberapa tahap, mulai dari pengumpulan dan pembersihan data, eksplorasi data untuk memahami fitur-fitur yang paling berpengaruh terhadap harga, pembangunan model prediksi, hingga evaluasi dan penyempurnaan model. Dengan pendekatan yang sistematis dan pemanfaatan teknologi terkini, proyek prediksi harga mobil ini berpotensi memberikan kontribusi terhadap efisiensi dan transparansi pasar mobil bekas.
+## Business Understanding
 
-# Business Understanding
+### Problem Statements
 
-## Problem Statements
-
-Ketidakpastian harga jual kembali mobil bekas menyulitkan pembeli dan penjual dalam menentukan harga yang tepat. Faktor-faktor seperti merek, model, usia, jarak tempuh, riwayat servis, kondisi fisik, dan reputasi penjual mempengaruhi harga, tetapi sering kali sulit untuk mengintegrasikan faktor-faktor ini secara akurat. Dari konteks yang telah disampaikan sebelumnya, teridentifikasi dua pertanyaan utama yang akan dijawab melalui proyek ini:
-1. Bagaimana proses pembuatan model *machine learning* yang dapat memprediksi harga jual mobil bekas?
+Dalam konteks sistem rekomendasi buku digital, masalah utama yang sering dihadapi adalah bagaimana cara mengidentifikasi dan merekomendasikan buku yang paling relevan dan menarik bagi pengguna individu. Dengan jumlah buku yang terus bertambah, tantangan ini menjadi semakin kompleks karena harus mempertimbangkan preferensi yang sangat personal dan dinamis dari setiap pengguna. Dari konteks yang telah disampaikan sebelumnya, teridentifikasi dua pertanyaan utama yang akan dijawab melalui proyek ini:
+1. Bagaimana proses pembuatan model *machine learning* yang dapat merekomendasikan buku?
 2. Apa langkah-langkah yang diperlukan dalam mempersiapkan data sebelum diaplikasikan dalam pengembangan model *machine learning*?
 
-## Goals
+### Goals
 
 Dari permasalahan yang telah diuraikan, tujuan yang ingin dicapai melalui proyek ini adalah sebagai berikut:
 1. Menjalankan proses persiapan data secara menyeluruh untuk memastikan data siap digunakan dalam model *machine learning*.
-2. Mengembangkan model *machine learning* yang efektif untuk menganalisis dan memprediksi harga jual mobil bekas dengan tingkat *error* yang minimal.
+2. Mengembangkan model *machine learning* yang efektif untuk dijadikan sistem rekomendasi buku yang relevan dan realibitas.
 
-## Solution Statements
+### Solution Statements
 
 Dari uraian sebelumnya, beberapa langkah strategis telah diidentifikasi untuk mencapai target proyek, antara lain:
-1. Proses persiapan data akan meliputi teknik-teknik berikut:
-   - One-hot-encoding untuk memtransformasikan fitur kategorikal menjadi fitur yang lebih detail dalam mempresentasikan kategori.
-   - Pembagian dataset menjadi dua bagian, yaitu set pelatihan dan set pengujian dengan proporsi 90% untuk pelatihan dan 10% untuk pengujian, yang akan digunakan dalam pengembangan model *machine learning*.
-   - Standardisasi nilai pada fitur numerik untuk menghindari deviasi yang signifikan pada data.
-   - Reduksi dimensi untuk mengurangi jumlah variabel dalam data sambil memastikan informasi penting tetap terjaga.
-2. Dalam fase pembuatan model *machine learning*, tiga model yang menggunakan algoritma yang berbeda akan diuji. Algoritma yang akan diaplikasikan meliputi Algoritma K-Nearest Neighbor, Algoritma Random Forest, dan Algoritma Adaptive Boosting. Setelah evaluasi kinerja masing-masing model, algoritma yang memberikan akurasi prediksi terbaik akan dipilih sebagai model utama.
-3. Ketiga model ini akan diuji secara bersamaan dengan menggunakan set data yang sama. Performa mereka akan dievaluasi berdasarkan metrik ***Mean Squared Error (MSE)*** untuk menentukan algoritma yang paling efektif dalam memprediksi harga mobil bekas dengan akurat.
+1. Proses pra-pemrosesan yang meliputi:
+   - Menyesuaikan dan merenamakan kolom atau atribut untuk mempermudah proses pengambilan dataset dan atribut tertentu.
+   - Mengkonsolidasikan data yang terpisah untuk mempersiapkannya untuk penggunaan di tahapan berikutnya.
+2. Proses persiapan data akan meliputi:
+   - Memeriksa kelogisan data yang terdapat dalam *dataset* dan menghilangkan nilai-nilai yang tidak masuk akal.
+   - Memeriksa keberadaan nilai-nilai yang hilang atau null dalam *dataset* dan mengambil tindakan untuk mengeliminasi atau menggantinya dengan nilai yang sesuai.
+   - Memastikan tidak ada entri data yang berulang untuk menjaga integritas model dan sistem yang dikembangkan.
+3. Dalam fase pembuatan model *machine learning*, dua pendekatan yang berbeda akan diuji.
+   - Content-Based Recommendation: Pendekatan ini akan menggunakan karakteristik buku seperti genre, penulis, dan deskripsi untuk merekomendasikan buku baru yang serupa dengan yang telah dibaca atau disukai oleh pengguna. Ini memungkinkan personalisasi yang kuat karena rekomendasi didasarkan pada preferensi pengguna yang spesifik.
+   - Collaborative Filtering Recommendation: Pendekatan ini akan menganalisis pola dan preferensi membaca dari banyak pengguna untuk mengidentifikasi kesamaan antara pengguna dan merekomendasikan buku berdasarkan buku yang disukai oleh pengguna dengan preferensi serupa. Ini memanfaatkan ‘kecerdasan kolektif’ dari basis pengguna untuk memberikan rekomendasi yang lebih luas dan beragam.
    
-# Data Understanding
+## Data Understanding
 
-![Dataset](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/3aca9dff-0179-4bbc-b0bf-afe5570ec676)
+![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/9a75d57c-19d7-47de-8652-e4a62edc1ce0)
 
-*Dataset* yang digunakan adalah [Car Price Prediction Challenge](https://www.kaggle.com/datasets/deepcontractor/car-price-prediction-challenge) dalam bentuk `.csv` ([Comma-separated Values](https://en.wikipedia.org/wiki/Comma-separated_values)). 
+*Dataset* yang digunakan adalah [Book Recommendation Dataset](https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset/data) dalam bentuk `.csv` ([Comma-separated Values](https://en.wikipedia.org/wiki/Comma-separated_values)). 
 
-*Dataset* tersebut masih perlu disesuaikan lagi sebelum digunakan. Berikut penyesuaian-penyesuaian yang dilakukan
-- Menghapus kolom yang tidak akan digunakan karena tidak relevan, sama saja dengan kolom lain, dan tidak menjelaskan apapun, yaitu `ID`, `Levy`, `Manufacturer`, `Model`, dan `Prod. year`
-  ```python
-      car.drop('ID'          , inplace=True, axis=1)
-      car.drop('Levy'        , inplace=True, axis=1)
-      car.drop('Manufacturer', inplace=True, axis=1)
-      car.drop('Model'       , inplace=True, axis=1)
-      car.drop('Prod. year'  , inplace=True, axis=1)
-   ```
-- Menghilangkan tulisan 'km', tulisan 'Turbo', dan mengubah tipe data menjadi `int64` dan `float64` supaya lebih mudah untuk melakukan prediksi
-  ```python
-     car['Price'] = car['Price'].astype('float64')
-     car['Engine volume'] = car['Engine volume'].str.replace(' Turbo', '').astype('float64')
-     car['Mileage'] = car['Mileage'].str.replace(' km', '').astype('float64')
-     car['Cylinders'] = car['Cylinders'].astype('int64')
-  ```
+Dalam *dataset* tersebut berisi tiga (3) berkas CSV, yaitu `Books.csv`, `Ratings.csv`, `Users.csv`.
+- **Books.csv**
 
-Langkah selaunjutnya proses *Exploratory Data Analysis* (EDA). EDA adalah proses investigasi awal pada data untuk mengidentifikasi pola, menemukan anomali, menguji hipotesis, dan memeriksa asumsi dengan menggunakan statistik ringkasan dan representasi grafis.
-
-1. **Deskripsi Variabel**  
-   Melakukan pengecekan informasi dari *dataframe* `car`
-   
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/d4402fb7-3c4e-4398-90fb-96aba87cb8a9)
-
-   Dari *dataset* yang telah dibersihkan, terdapat 19.237 baris data dengan atribut sebanyak 13 kolom. Terdapat 2 atribut dengan tipe data `int64`, 3 atribut dengan tipe data `float64` dan 8 atribut dengan tipe data `object`. Berikut adalah keterangan untuk masing-masing variabel,
-      - `Price` : Harga jual mobil dalam $
-      - `Category` : Kategori mobil, seperti SUV, sedan, hatchback, dll
-      - `Leather interior` : Menunjukkan apakah mobil memiliki interior kulit atau tidak.
-      - `Fuel type` : Jenis bahan bakar yang digunakan mobil
-      - `Engine volume` : Volume mesin mobil, diukur dalam liter
-      - `Mileage` : Jarak tempuh mobil dalam KM
-      - `Cylinders` : Jumlah silinder dalam mesin mobil.
-      - `Gear box type` : Jenis kotak gigi/transmisi, seperti manual, otomatis, atau semi-otomatis.
-      - `Drive wheels` : Jenis penggerak roda, seperti penggerak roda depan, belakang, atau semua roda.
-      - `Doors` : Jumlah pintu pada mobil.
-      - `Wheel` : Jenis roda yang digunakan, bisa juga merujuk pada *steering wheel* (kiri atau kanan).
-      - `Color` : Warna eksterior mobil.
-      - `Airbags` : Jumlah kantung udara keselamatan yang tersedia di mobil.
-   
-2. **Deskripsi Statistik**  
-   
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/a997ee50-3f32-451f-97e3-916bd46959f2)
-
-   Melihat deskripsi statistik dari *dataframe* `car` yaitu,
-   -  `count` : Jumlah data
-   -  `mean` : Rata-rata
-   -  `std` : Standar deviasi/simpangan baku
-   -  `min` : Nilai minimum
-   -  `25%` : Kuartil bawah/Q1
-   -  `50%` : Kuartil tengah/Q2/median
-   -  `75%` : Kuartil atas/Q3
-   -  `max` : Nilai maksimum
-   
-3. **Menangani Missing Value**  
-   
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/7720f307-9d09-40d5-87f8-ed3119d23946)
-   
-   Ada **2405 kolom** *airbags*, **10 kolom** *engine volume*, dan **721 kolom** *mileage* yang tidak diketahui. Oleh karena itu, data-data yang tidak diketahui akan dihilangkan dari *dataset*.
-   ```python
-   car = car.loc[(car[['Engine volume', 'Mileage', 'Airbags']]!=0).all(axis=1)]
-   ```
-   
-4. **Menangani Outliers**  
-   Untuk memeriksa keberadaan data yang menyimpang atau *outliers* dalam *dataframe* `car` dapat menggunakan visualisasi data berupa [`boxplot`](https://seaborn.pydata.org/generated/seaborn.boxplot.html) yang dibantu oleh *library* [`seaborn`](https://seaborn.pydata.org/). *Outliers* adalah nilai-nilai yang sangat berbeda dari sebagian besar data dan bisa mempengaruhi hasil analisis secara keseluruhan. Visualisasi dengan `boxplot` memungkinkan kita untuk mengidentifikasi dan mengevaluasi *outliers* ini secara efektif.
-   
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/7c9839f4-df1b-48f3-87b2-235553b3ea8f)
+  ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/1bf780f9-f995-4f20-964a-590e60c27c83).     
      
-   Dari diagram boxplot yang ditampilkan, terlihat bahwa pada variabel numerik yang menunjukkan adanya nilai-nilai *outlier*, yaitu data yang jauh berbeda dari nilai-nilai lainnya dalam kumpulan data tersebut.
+     - ISBN: Kode unik yang diberikan untuk setiap buku yang memudahkan identifikasi dan standarisasi di seluruh dunia.
+     - Book-Title: Nama resmi dari sebuah karya literatur.
+     - Book-Author: Individu yang menciptakan konten buku.
+     - Year-Of-Publication: Periode ketika buku tersebut pertama kali dirilis ke publik.
+     - Publisher: Entitas yang mengatur proses penerbitan buku ke pasar.
+     - Image-URL-S: Alamat web untuk gambar sampul buku yang berukuran kecil.
+     - Image-URL-M: Alamat web untuk gambar sampul buku yang berukuran medium.
+     - Image-URL-L: Alamat web untuk gambar sampul buku yang berukuran besar.
 
-   Untuk mengidentifikasi dan menangani *outliers*, pendekatan yang digunakan adalah metode IQR, atau *Inter Quartile Range*.
-   $$IQR=Q_3-Q_1$$
-   
-   Selanjutnya, batas bawah dan batas atas ditetapkan untuk mengelilingi *outliers*.
-   
-   $$BatasBawah=Q_1-1.5*IQR$$
-   
-   $$BatasAtas=Q_3-1.5*IQR$$
+- **Ratings.csv**
 
-   Metode ini memungkinkan identifikasi nilai yang berada di luar jangkauan normal data.
-   
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/27013af8-eae8-453c-af4f-c222b85c6e98)
-   
-   Setelah membersihkan *outliers* dengan metode IQR, atau *Inter Quartile Range*, terlihat bahwa jumlah *outliers* pada boxplot telah menurun. Walaupun masih terdapat *outliers* pada variabel `price`, `engine volume`, dan `mileage`, nilai-nilai tersebut masih berada dalam rentang yang dianggap aman.
-   
-5. **Univariate Analysis**  
-   Melaksanakan analisis data *univariate* terhadap variabel-variabel. Proses analisis ini menggunakan bantuan visualisasi histogram.
+  ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/6c63ab61-3c66-4019-a125-bd80669ea9bc).     
+     
+     - User-ID: Nomor yang diberikan secara khusus kepada setiap pengguna sebagai identifikasi yang membedakan satu pengguna dengan pengguna lainnya.
+     - ISBN: Kode unik yang diberikan untuk setiap buku yang memudahkan identifikasi dan standarisasi di seluruh dunia.
+     - Book-Rating: Skor yang diberikan oleh pengguna untuk menilai buku, biasanya mencerminkan kesukaan atau kualitas buku tersebut.
 
-   ***Categorical Features***
-
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/84d8a4b8-c365-4feb-9598-979cc94ee71b)
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/a7a63af6-fecc-4e4a-b1f7-b853d5d90bb3)
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/f272404d-863c-4cb8-bed9-a141760d26c5)
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/e6686511-f998-4a46-b755-16ef62715ea8)
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/e17e4ea9-d744-45bb-9a15-91e14bf13d4a)
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/7b67f47b-21ec-453e-b859-a6faad0edff8)
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/d96fdbb9-5bb7-4a3f-b67e-7f8d6bab49f4)
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/0c1234dd-e0fd-4448-9f43-f093bfc028d4)
-
-   Dari data beberapa histogram di atas diperoleh informasi, yaitu:
-   - Mayoritas mobil yang ada di pasar bertipe sedan.
-   - Lebih dari **50%** mobil memiliki interior terbuat dari kulit.
-   - Mayoritas mobil berbahan bakar petrol.
-   - Mobil matic lebih sering dijumpai di pasar.
-   - Mobil dengan penggerak di depan lebih banyak.
-   - Mobil dengan 4 pintu lebih banyak dibandingkan 2 pintu dan >5 pintu.
-   - Lebih banyak mobil dengan posisi stir di kiri.
-   - Warna putih, silver, dan hitam mendominasi warna mobil di pasar.
-
-   ***Numerical Features***
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/56df933d-c99d-4e23-9767-9f8fa21b6268)
-
-   Informasi yang dapat diketahui dari histogram di atas
-   *   Harga pasaran mobil berada di **<$1000**
-   *   Volume mesin kendaraan mobil umumnya 2 liter
-   *   Kendaraan bekas pakai mendominasi pasar mobil
-   *   Hampir semua mobil memiliki 4 silinder
-   *   Mayoritas jumlah *airbags* dalam mobil adalah 4
-   
-6. **Multivariate Analysis**  
-   Melaksanakan analisis data *multivariate* terhadap variabel-variabel.
-
-   ***Categorical Features***
-   
-   Mengecek harga kendaraan terhadap masing-masing fitur
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/ed7edb20-444e-4c6f-9689-9b5c3d4f6f66)
-   
-   Informasi yang bisa didapatkan dari histogram di atas
-   *   Mobil bertipe Jeep dan Universal memiliki harga yang tertinggi dibandingkan dengan mobil lainnya
-   *   Mobil dengan interior kulit memiliki harga yang lebih mahal
-   *   Mobil dengan bahan bakar Diesel dan *Plug-in Hybrid* memiliki harga tertinggi dan sangat jauh gap harganya dengan mobil berbahan bakar CNG
-   *   Harga mobil yang *Gear box*-nya bertipe Tiptronic paling tinggi
-   *   Tidak ada perbedaan harga mobil berdasarkan roda penggeraknya
-   *   Mobil dengan pintu 2 memiliki harga yang jauh dangan pintu 4 dan pintu >5
-   *   Mobil stri kiri memiliki harga yang lebih mahal dibandingkan mobil stir kanan
-   *   Harga mobil berdasarkan warna memiliki banyak variasi. Mobil dengan warna *pink, purple*, dan *green* memiliki harga di bawah rata-rata
-
-   ***Numerical Features***
-   
-   Menggambarkan distribusi data untuk variabel numerik dalam *dataframe* `epower` menggunakan visualisasi. Ini dilakukan dengan memanfaatkan fungsi `pairplot` dari *library*    `seaborn`, dengan menetapkan `diag_kind` ke `kde` untuk mengestimasi dan memvisualisasikan distribusi probabilitas dari setiap variabel numerik.
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/c35adee6-7572-4e95-b35e-1ec4c260ae94)
-
-7. **Correlation Matrix with Heatmap**  
-   Mengkaji hubungan antara variabel numerik dengan memvisualisasikan matriks korelasi melalui diagram *heatmap*.
-   
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/d05feabc-aa06-42d1-822d-14bedaa52066)
-
-   Diagram *heatmap* yang ditampilkan memiliki angka dari -0.25 hingga 1, yang mengindikasikan tingkat korelasi antara variabel numerik dengan cara berikut:
-- Nilai yang mendekati 1 menandakan adanya korelasi positif yang kuat antara dua variabel, di mana keduanya cenderung meningkat secara bersamaan.
-- Nilai yang mendekati 0 menunjukkan bahwa tidak ada korelasi yang signifikan antara dua variabel.
-- Nilai yang mendekati -1 menunjukkan korelasi negatif yang kuat, di mana satu variabel cenderung meningkat sementara yang lainnya menurun.  
-
-8. **Analisis Korelasi Antar Fitur**  
-   Fitur `Price` memiliki korelasi yang cukup kuat dengan `Engine Volume`.
-
-   Sehingga, fitur `Mileage`, `Cylinders`, dan `Airbags`yang memiliki korelasi rendah dapat dilakukan *drop* (menghapus) untuk menghilangkan fitur-fitur tersebut.
+   Untuk mendapatkan gambaran statistik dari kolom `Book-Rating` dalam *dataframe* `Ratings`, kita akan menghitung dan menampilkan ukuran-ukuran statistik dasar. Ini termasuk menghitung rata-rata, standar deviasi, nilai minimum dan maksimum, serta nilai-nilai kuartil yang mencakup kuartil pertama, median, dan kuartil ketiga. Semua ini memberikan wawasan tentang distribusi nilai *rating* yang diberikan oleh pengguna pada buku.
 
    ```python
-   car.drop(['Mileage'],   inplace=True, axis=1)
-   car.drop(['Cylinders'], inplace=True, axis=1)
-   car.drop(['Airbags'],   inplace=True, axis=1)
-   ```
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/7ea1d0f8-71fd-4263-ab41-a3efa55cc924)
-
-# Data Preparation
-
-Tahap persiapan data, yang sudah dijelaskan dalam bagian [Solution Statements](#solution-statements "Solution Statements"), merupakan langkah krusial untuk memastikan data siap digunakan dalam pelatihan model *machine learning*. Ada tiga langkah utama dalam persiapan data, yaitu:
-
-1. **Encoding Fitur Kategori**
-
-   Dalam proses pengkodean untuk variabel kategori, teknik yang sering digunakan adalah [*`one-hot-encoding`*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html). Fungsi ini tersedia dalam library [*`scikit-learn`*](https://scikit-learn.org/), yang memungkinkan transformasi variabel kategori menjadi fitur-fitur baru yang dapat merepresentasikan informasi kategorikal dengan tepat.
-
-    ```python
-    #One-hot-encoding
-   car = pd.concat([car, pd.get_dummies(car['Category'], prefix='Category')],axis=1)
-   car = pd.concat([car, pd.get_dummies(car['Leather interior'], prefix='Leather interior')],axis=1)
-   car = pd.concat([car, pd.get_dummies(car['Fuel type'], prefix='Fuel type')],axis=1)
-   car = pd.concat([car, pd.get_dummies(car['Gear box type'], prefix='Gear box type')],axis=1)
-   car = pd.concat([car, pd.get_dummies(car['Drive wheels'], prefix='Drive wheels')],axis=1)
-   car = pd.concat([car, pd.get_dummies(car['Doors'], prefix='Doors')],axis=1)
-   car = pd.concat([car, pd.get_dummies(car['Wheel'], prefix='Wheel')],axis=1)
-   car = pd.concat([car, pd.get_dummies(car['Color'], prefix='Color')],axis=1)
-   car.drop(['Category','Leather interior','Fuel type', 'Gear box type', 'Drive wheels', 'Doors', 'Wheel', 'Color'], axis=1, inplace=True)
-    ```
-    
-2. **Split Data**  
-   Proses pembagian data bertujuan untuk membagi kumpulan data menjadi dua segmen: segmen untuk pelatihan, yang disebut *data train*, dan segmen untuk pengujian, yang disebut *data test*. Pembagian ini menggunakan metode `train_test_split` dengan proporsi 90% data untuk pelatihan dan 10% sisanya untuk pengujian.
-   
-    ```python
-       X = car.drop(["Price"],axis =1)
-       y = car["Price"]
-       X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.1, random_state = 123)
-    ```
-    ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/c4761482-8a78-4cdf-ba17-3ad826fc091d)
-
-3. **Standarisasi pada Fitur Numerik**  
-   Melakukan standarisasi nilai pada fitur numerik dengan menggunakan `StandardScaler` dari *library* `scikit-learn`. Proses standarisasi ini bertujuan untuk mencegah terjadinya penyimpangan nilai data yang cukup besar.
-   
-    ```python
-      numericalFeatures = ['Engine volume']
-      scaler = StandardScaler()
-      scaler.fit(X_train[numericalFeatures])
-      X_train[numericalFeatures] = scaler.transform(X_train.loc[:, numericalFeatures])
-      X_train[numericalFeatures].head()
-    ```
-   
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/6aa0f8d7-d0ac-4c6f-abbe-4820161a7caa)
-
-4. **Reduksi Dimensi**  
-   Reduksi dimensi adalah metode yang digunakan untuk mengurangi jumlah variabel dalam data sambil memastikan informasi penting tetap terjaga. Salah satu metode reduksi dimensi yang sering digunakan adalah *Principal Component Analysis*, atau PCA. Teknik ini mengurangi dimensi data dengan mengubahnya dari ruang berdimensi n menjadi ruang berdimensi m yang lebih rendah, di mana m lebih kecil dari n, tanpa kehilangan esensi data tersebut.
-
-   ```python
-       sns.pairplot(car[['Price','Engine volume']], plot_kws={"s": 3});
+   rating['Book-Rating'].describe().apply(lambda x: '%.f' % x)
    ```
 
-   ![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/5075307b-324c-458b-a755-d9308a778a31)
+  ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/7c3e2946-153b-44cd-ac7e-25a33dbb275a)
 
-   Aplikasikan [*`class PCA`*](https://scikit--learn-org.translate.goog/stable/modules/generated/sklearn.decomposition.PCA.html?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=tc) dari library *`scikit learn`*
- 
+
+  Ini merupakan grafik histogram yang menampilkan distribusi frekuensi dari penilaian yang diberikan oleh pengguna untuk buku-buku yang telah mereka baca, dengan skala penilaian yang berkisar antara 1 sampai 10.
+
+  ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/2e9f4875-ba55-4798-a230-d798f5f79970)
+
+  Dari grafik histogram "Jumlah Rating Buku" yang telah divisualisasikan, kita dapat melihat bahwa skor *rating* yang paling sering muncul adalah 0, dengan total sekitar 700.000 kali lebih. Karena *rating* 0 ini bisa menimbulkan bias dalam analisis data, ada baiknya kita mengeluarkan *rating* tersebut selama proses persiapan data untuk memastikan hasil analisis yang lebih akurat.
+
+- **Users.csv**
+
+  ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/7e2c2ba7-7f8f-4e59-8f0e-e4fe74073f3d)
+     
+     - User-ID: Nomor yang diberikan secara khusus kepada setiap pengguna sebagai identifikasi yang membedakan satu pengguna dengan pengguna lainnya.
+     - Location: Tempat tinggal atau wilayah geografis di mana pengguna berada atau berasal.
+     - Age: Tahun yang telah dilewati sejak kelahiran pengguna, biasanya digunakan untuk statistik demografis atau personalisasi konten.
+
+   ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/9bdd0fab-da34-490c-bdc0-a20fac407bbb)
+
+  Jika diperhatikan, max dari fitur `age` adalah 244, berarti ada pembaca buku yang berusia 244 tahun. Secara sekilas, ini tidak masuk akal, ada manusia modern yang berusia lebih dari 200 tahun. Untuk itu kita akan ekplorasi lebih jauh pada fitur `age` pada bagian *data preparation*.
+
+## Data Preprocessing
+
+Proses pra-pemrosesan data, atau *data preprocessing*, adalah langkah penting yang harus diambil sebelum memulai pemodelan. Langkah ini melibatkan transformasi data asli menjadi format yang lebih terstruktur dan bersih, yang kemudian dapat digunakan dalam analisis lebih lanjut. Untuk kasus ini, *data preprocessing* mencakup penyesuaian nama-nama kolom di setiap *dataframe*, menggabungkan informasi ISBN, serta mengintegrasikan *users* untuk mendapatkan gambaran lengkap tentang dataset.
+
+1. **Penyesuaian Nama Kolom/Atribut**
+
+   Menggunakan fungsi `.assign()` untuk mengubah nama kolom atau atribut dalam *dataframe* bertujuan agar proses referensi kolom atau atribut di langkah-langkah berikutnya menjadi lebih sederhana dan intuitif.
+
+   - Books
+   
+   ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/af541c05-0fbc-444a-86f7-6758875bfd17)
+
+   - Rating
+
+   ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/9c72faae-32f4-4500-99aa-fcf8798c7d4e)
+
+   - Users
+
+   ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/82c55746-68ab-4091-a855-ccd3fa36e184)
+
+    
+2. **Menggabungkan Data Dengan Fitur ISBN**  
+   Fungsi `.concatenate` dari *library* [`numpy`](https://numpy.org) digunakan untuk menggabungkan data ISBN yang terdapat di *dataframe* `df_b` untuk buku dan `df_r` untuk *rating*. Proses ini menyatukan informasi ISBN dari kedua *dataframe* ke dalam satu kolom `isbn`.
+   
     ```python
-         pca = PCA(n_components=2, random_state=123)
-         pca.fit(car[['Price','Engine volume']])
-         princ_comp = pca.transform(car[['Price','Engine volume']])
+       ISBNAll = np.unique(np.concatenate([books['isbn'].unique(), rating['isbn'].unique()]))
+       print('Jumlah Buku berdasarkan ISBN :', len(ISBNAll))
+    ```
+
+3. **Menggabungkan Data *User***  
+   Fungsi `.concatenate` dari *library* [`numpy`](https://numpy.org) digunakan untuk menyatukan data `user_id` yang berasal dari *dataframe* `rating` dan *dataframe* `users`. Proses ini menggabungkan kedua set data berdasarkan kolom `user_id`.
+   
+    ```python
+      USERAll = np.unique(np.concatenate([rating['user_id'].unique(), users['user_id'].unique()]))
+      print('Jumlah Buku berdasarkan ISBN :', len(USERAll))
+    ```
+   
+## Data Preparation
+
+Proses persiapan data, atau *data preparation*, adalah langkah krusial yang mendahului fase pembuatan model *machine learning*. Langkah ini melibatkan modifikasi data ke format yang sesuai untuk pemodelan. Dalam konteks ini, *data preparation* mencakup penanganan nilai yang hilang, verifikasi keberadaan data ganda, serta integrasi data dari *dataframe* *`books`* dan *`rating`* untuk memastikan data siap digunakan.
+
+1. **Pengecekan Missing Value**
+
+   Untuk mengetahui jumlah total nilai yang tidak ada atau *missing* dalam sebuah *dataframe*, kita dapat memanfaatkan metode `.isnull().sum()`. Metode ini akan menghitung dan memberikan jumlah keseluruhan nilai yang hilang di seluruh kolom *dataframe*.
+
+   - Books
+
+     ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/71694b91-4a14-4fbd-adab-ad1a92703e46)
+
+     Dari informasi yang diberikan, terlihat bahwa dalam *dataframe* `books`, ada beberapa entri yang kosong. Khususnya, kolom `book_author` kosong satu entri, `publisher` kosong dua entri, dan `image_l_url` kosong tiga entri. Oleh karena itu, entri yang tidak memiliki data atau *null* bisa dieliminasi dengan memanfaatkan metode `.dropna()`. Setelah proses ini, pemeriksaan ulang akan menunjukkan bahwa tidak ada lagi entri yang kosong atau *null* dalam *dataframe*.
+     ```python
+     books = books.dropna()
+     books.isnull().sum()
+     ``` 
+
+   - Rating
+
+     ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/2183e891-136d-4628-9d0f-4a87ac0a2df5)
+
+     Dari informasi yang diberikan, terlihat bahwa dalam *dataframe* `rating`, tidak ada entri yang kosong.
+
+     Dari analisis eksploratif data univariat yang telah dilakukan, terungkap bahwa dalam histogram "Jumlah Rating Buku", mayoritas *rating* yang diberikan oleh pengguna adalah 0, dengan total mencapai lebih dari 700.000. Karena keberadaan *rating* 0 ini bisa mempengaruhi hasil analisis secara signifikan, menghapus data *rating* 0 dilakukan untuk mengurangi potensi bias.
+
+     ```python
+     rating = rating[rating.book_rating > 0]
+     ```
+
+     ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/391a523c-e500-4f31-8cbc-2a21b4eec7a2)
+
+     Dari visualisasi histogram yang ditampilkan, dengan penghapusan *rating* 0, terlihat bahwa distribusi frekuensi menjadi lebih teratur dan mudah dipahami
+
+   - Users
+
+     Sebelum melakukan *missing value implementation*, ingat bahwa sebelumnya telah dibahas di bagian analisis eksploratif data univariat bahwa fitur `age` di dataframe users memiliki kejanggalan karena nilainya lebih dari 200 tahun.
+
+     ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/93abfc2a-6abf-42d6-b3f1-d84ab7dfef40)
+
+     Data-data tersebut akan dihilangkan dari *dataset*
+
+     ```python
+     users['age'] = pd.to_numeric(users['age'], errors='coerce')
+     del_users = users[users['age'] > 120].index
+     users.drop(del_users, inplace=True)
+     ```
+
+     Setelah itu, kita melihat *missing value* dari users
+
+     ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/94ee9d20-b40e-47a3-9bf5-66668f0c0a18)
+
+     Oleh karena itu, entri yang tidak terisi pada data `age` bisa diatasi dengan menggantinya menggunakan nilai yang paling banyak terjadi, atau modus, melalui penerapan fungsi `.fillna()` bersamaan dengan `.mode()`. Metode `.mode()` dipilih karena fitur `age` bernilai integer bilangan bulat, sehingga akan lebih cocok untuk mengisi *`NaN`* dengan data yang sering muncul pada fitur `age`.
+
+     ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/5e374885-f0ae-458a-8a90-aa8b5eff9e56)
+
+     Visualisasi histogram di atas menunjukan bahwa usia para *users* didominasi di rentang usia 20-an
+
+
+2. **Data Duplicate**  
+   Untuk memeriksa keberadaan data yang duplikat dalam *dataframe*, kita dapat menggunakan perintah `.duplicated().sum()` yang akan menghitung jumlah data yang duplikat.
+   
+   ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/e3dcd57a-b554-4f64-867a-6a9524af92c8)
+
+   Hasil penelusuran menunjukan bahwa tidak ada data duplikasi pada *dataframe* proyek ini.
+    
+
+3. **Merger Books and Rating**  
+   *Dataframe* `books` dan `rating` memiliki fitur yang sama, yaitu `isbn`. Sehingga akan baik dilakukan merger untuk mendapatkan kesamaan dan korelasi antar dua *dataframe*.
+   
+    ```python
+      books_rating = pd.merge(rating, books, on=['isbn'])
     ```
     
-# Model Development
+## Modelling & Result
 
-Setelah dilakukannya tahap *data preparation*, selanjutnya adalah melakukan tahap persiapan model terlebih dahulu sebelum mengembangkan model menggunakan algoritma yang telah ditentukan.
+Langkah berikutnya dalam proyek ini adalah fase *modeling*, di mana kita akan mengembangkan model *machine learning* untuk sistem rekomendasi. Model ini akan menyarankan buku-buku yang paling sesuai untuk pengguna berdasarkan algoritma rekomendasi yang dipilih. Dari analisis data awal, kita mengetahui bahwa kita memiliki jumlah data yang sangat besar untuk buku, *rating*, dan pengguna, yang berkisar dari ratusan ribu hingga jutaan entri. Ukuran data ini dapat menyebabkan tantangan dalam hal biaya komputasi, seperti waktu pemrosesan yang lama dan kebutuhan akan RAM atau GPU dengan kapasitas besar.
 
-Yang pertama dilakukan adalah menyiapkan *dataframe* untuk analisis model menggunakan `index` yang terdiri dari `train_mse` dan `test_mse`, serta `columns` yang mencakup algoritma prediksi seperti [`K-Nearest Neighbor (KNN)`](https://www.geeksforgeeks.org/k-nearest-neighbours/), [`Random Forest`](https://www.ibm.com/topics/random-forest#:~:text=Random%20forest%20is%20a%20commonly,Decision%20trees), dan [`Adaptive Boosting (AdaBoost)`](https://www.analyticsvidhya.com/blog/2021/09/adaboost-algorithm-a-complete-guide-for-beginners/#:~:text=AdaBoost%20algorithm%2C%20short%20for%20Adaptive,assigned%20to%20incorrectly%20classified%20instances.).
+Mengingat keterbatasan ini, kita akan membatasi dataset yang digunakan dalam pemodelan *machine learning* ini. Kita akan menggunakan hanya 20.000 entri teratas dari data buku dan 10.000 entri teratas dari data *rating*. Langkah ini akan membantu mengurangi beban komputasi sambil tetap memungkinkan kita untuk melatih model yang efektif dan memberikan rekomendasi yang berkualitas.
 
 ```python
-models = pd.DataFrame(
-    index   = ['train_mse', 'test_mse'],
-    columns = ['KNN', 'RandomForest', 'Boosting']
-)
+   books   = books[:20000]
+   rating = rating[:10000]
 ```
 
-Langkah selanjutnya adalah menerapkan ketiga algoritma ke dalam *dataframe*
+### 1. Content-based Recommendation
 
-1. **K-Nearest Neighbor (KNN) Algorithm**  
-   ```python
-   knn = KNeighborsRegressor(n_neighbors=10)
-   knn.fit(X_train, y_train)
-   models.loc['train_mse','knn'] = mean_squared_error(y_pred = knn.predict(X_train), y_true=y_train)
-   ```
-   
-   Algoritma KNN merupakan metode klasifikasi yang tidak bergantung pada parameter tertentu dan berada di bawah kategori pembelajaran dengan pengawasan. Algoritma ini       memanfaatkan jarak antar titik data untuk menentukan klasifikasi atau prediksi kelompok dari sebuah titik data. Algoritma ini termasuk metode yang populer dan mudah digunakan dalam *machine learning* untuk klasifikasi dan regresi. Walaupun algoritma KNN bisa digunakan untuk regresi maupun klasifikasi, umumnya lebih sering digunakan untuk klasifikasi. Algoritma ini beroperasi berdasarkan prinsip bahwa titik-titik data yang mirip biasanya berdekatan [[4]](https://www.ibm.com/topics/knn).
-   Cara kerja algoritma K-Nearest Neighbor adalah sebagai berikut: [[5]](https://geospasialis.com/k-nearest-neighbor/)
-     - Tentukan jumlah ( K ), yaitu tetangga terdekat yang akan digunakan untuk klasifikasi
-     - Hitunglah jarak dari data yang akan diklasifikasikan ke semua titik dalam *dataset.*
-     - Urutkan titik-titik tersebut berdasarkan jarak dari yang terkecil hingga terbesar dan pilih ( K ) titik dengan jarak terkecil.
-     - Identifikasi kelas yang paling sering muncul di antara ( K ) titik tersebut.
-     - Klasifikasikan data baru ke dalam kelas yang paling dominan berdasarkan tetangga terdekatnya.
+*Content-based recommendations* adalah sistem rekomendasi yang menggunakan detail dan atribut dari item yang ada, seperti buku, film, atau produk lainnya, untuk memberikan saran yang sesuai dengan preferensi pengguna. Sistem ini menganalisis kata kunci dan atribut yang ditetapkan pada item dalam database untuk menghasilkan prediksi yang mungkin berguna bagi pengguna.
+
+Dalam sistem ini, profil pengguna dibuat berdasarkan item-item yang mereka sukai atau interaksi yang mereka lakukan. Misalnya, jika seseorang sering menonton film bergenre komedi, sistem akan merekomendasikan film lain dengan genre yang sama atau yang memiliki karakteristik serupa.
+
+- **TF-IDF Vectorizer**  
+   *Term Frequency Inverse Document Frequency Vectorizer*, atau TF-IDF Vectorizer, adalah sebuah metode untuk mengubah teks menjadi angka (vektor) yang dapat digunakan dalam pemrosesan data dan model *machine learning*. TF-IDF mengukur pentingnya sebuah kata dalam dokumen relatif terhadap kumpulan dokumen (korpus) [[5]](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html). 
+
+   TF-IDF dihitung dengan formula berikut: 
+$$idf_i = \log \left( \frac{n}{df_i} \right)$$
+di mana $idf_i$ adalah nilai IDF untuk kata kunci $i$, $df_i$ adalah jumlah dokumen yang termasuk kata kunci $i$, dan $n$ adalah total jumlah dokumen. Nilai $df$ yang lebih tinggi untuk suatu kata kunci menghasilkan nilai $idf$ yang lebih rendah untuk kata kunci tersebut. Jika $df$ sama dengan $n$, yang berarti kata kunci muncul di setiap dokumen, maka $idf$ akan nol karena $\log(1) = 0$.
+
+   Nilai TF-IDF sendiri adalah hasil kali dari frekuensi kata kunci dalam dokumen dengan nilai IDF-nya.
+$$w_{i,j} = tf_{i,j} \times idf_i$$
+
+  di mana $w_{i,j}$ adalah nilai TF-IDF untuk kata kunci $i$ di dokumen $j$, $tf_{i,j}$ adalah jumlah kemunculan kata kunci $i$ di dokumen $j$, dan $idf_i$ adalah nilai IDF untuk kata kunci $i$.
+
+   Hasil penerapan TF-IDF Vectorizer
+  
+  ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/15803f3c-b352-4f97-8f7e-92e5d734767e)
+
+   Kelebihan dan Kekurangan Penggunaan TF-IDF [[6]](https://www.capitalone.com/tech/machine-learning/understanding-tf-idf/)
+  - Kelebihan Penggunaan TF-IDF
+
+    Salah satu kelebihan terbesar dari TF-IDF adalah kemudahan dan kesederhanaannya dalam penggunaan. Perhitungannya mudah, tidak memerlukan banyak komputasi, dan menjadi titik awal yang baik untuk perhitungan kesamaan (melalui vektorisasi TF-IDF + Cosine Similarity).
+    
+  - Kekurangan Penggunaan TF-IDF
+
+    Perlu diperhatikan bahwa TF-IDF tidak dapat menangkap makna semantik. Metode ini mempertimbangkan pentingnya kata berdasarkan bobotnya, namun tidak dapat menangkap konteks kata untuk memahami pentingnya dalam cara tersebut. Seperti yang telah disebutkan sebelumnya, TF-IDF mengabaikan urutan kata sehingga frasa seperti "Queen of England" tidak akan dianggap sebagai satu kesatuan. Hal ini juga berlaku pada situasi seperti negasi "not pay the bill" vs "pay the bill", di mana urutan kata sangat mempengaruhi makna. Dalam kedua kasus tersebut, penggunaan alat NER dan garis bawah, seperti "queen_of_england" atau "not_pay", dapat menjadi cara untuk menganggap frasa tersebut sebagai satu kesatuan.
+    Kekurangan lainnya adalah TF-IDF dapat tidak efisien dalam penggunaan memori karena dapat mengalami masalah dimensi yang tinggi. Panjang vektor TF-IDF sama dengan ukuran kosakata. Dalam beberapa konteks klasifikasi ini mungkin tidak menjadi masalah, tetapi dalam konteks lain seperti pengelompokan, hal ini dapat menjadi tidak praktis seiring bertambahnya jumlah dokumen. 
+
+- **Cosine Similarity**
+
+     *Cosine Similarity* adalah metrik matematika yang digunakan untuk mengukur kesamaan antara dua vektor dalam ruang multidimensi. Ini didefinisikan sebagai kosinus sudut antara vektor, yang merupakan hasil perkalian titik dari vektor dibagi dengan hasil kali panjang mereka. Metrik ini sangat berguna dalam analisis teks dan sistem rekomendasi, di mana teks diubah menjadi vektor kata dan kesamaan semantik antara dokumen dapat diukur berdasarkan arah vektor tersebut, bukan hanya berdasarkan magnitudo atau ukuran mereka. Cosine Similarity selalu berada dalam interval -1 hingga 1, di mana -1 berarti persis berlawanan, 0 menunjukkan ortogonal atau tidak berkorelasi, dan 1 berarti persis sama. Untuk menentukan seberapa mirip satu judul buku dengan yang lain, kita bisa menggunakan teknik *cosine similarity*. Fungsi `cosine_similarity` dari *library* `sklearn` memungkinkan kita untuk melakukan perhitungan ini [[7]](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html).
+
+  ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/020973bc-9602-4cc3-83b3-215817c8d9a5)
+
+  Di mana $A_i$ dan $B_i$ merupakan komponen dari masing-masing vektor A dan B.
+
+  Hasil penerapan Cosine Similarity.
+
+  ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/d80fe713-ac6d-47c5-8730-83cf84d8c1a3)
+
+  Kelebihan dan Kekurangan Penggunaan Cosine Similarity [[8]](https://www.geeksforgeeks.org/cosine-similarity/)
+  - Kelebihan Penggunaan Cosine Similarity
        
-      <br>
-      <img src="https://user-images.githubusercontent.com/64983961/188507827-0f729ab6-61a5-4dbc-9be2-afa424f6c294.png" alt="Ilustrasi Algoritma K-Nearest Neighbor" title="Ilustrasi Algoritma K-Nearest Neighbor">
-     
-   Perhitungan jarak ke tetangga terdekat dapat dilakukan dengan menggunakan metrik sebagai berikut:
-   
-      - *Euclidean distance*
-            $$d(x,y)=\sqrt{\sum_{i=1}^n (x_i-y_i)^2}$$
-      - *Manhattan distance*
-            $$d(x,y)=\sum_{i=1}^n |x_i-y_i|$$
-      - *Hamming distance*
-            $$d(x,y)=\frac{1}{n}\sum_{n=1}^{n=n} |x_i-y_i|$$
-      - *Minkowski distance*
-            $$d(x,y)=\left(\sum_{i=1}^n |x_i-y_i|^p\right)^\frac{1}{p}$$
-     
-   Kelebihan dari algoritma K-Nearest Neighbor adalah: 
-     - Kesederhanaan dan mudah dipahami
-     - Mudah diterapkan
-     - Berlaku untuk klasifikasi dan regresi
-     - Dapat digunakan pada jumlah kelas yang beragam
-     - Tidak memerlukan proses training
-     - Penambahan data baru yang mudah
-     - Parameter minimal
-     - Hasil pemodelan non-linear, cocok untuk data dengan batasan tidak linear
-     
-   Sedangkan kelemahan dari algoritma K-Nearest Neighbor adalah: 
-     - Penentuan nilai \( K \) yang optimal diperlukan
-     - Biaya komputasi yang besar
-     - Proses yang lambat untuk dataset besar
-     - Performa menurun pada data berdimensi tinggi
-     - Sensitivitas terhadap data *noisy*, data yang hilang, dan *outlier*
-     
-2. **Random Forest Algorithm**  
-   ```python
-   RF = RandomForestRegressor(n_estimators=50, max_depth=16, random_state=55, n_jobs=-1)
-   RF.fit(X_train, y_train)
-   models.loc['train_mse','RandomForest'] = mean_squared_error(y_pred=RF.predict(X_train), y_true=y_train)
-   ```
-   
-     *Random forest* memperluas metode *bagging* dengan menggabungkan teknik *bagging* dan pemilihan fitur secara acak, menciptakan kumpulan *decision tree* yang independen satu sama lain. Pemilihan fitur acak ini menciptakan subset fitur yang berbeda-beda, yang menjamin bahwa setiap *decision tree* memiliki sedikit kesamaan. Ini membedakan *random forest* dari *decision tree* biasa, yang biasanya mempertimbangkan semua fitur saat membagi data, sementara *random forest* hanya menggunakan sebagian dari fitur-fitur tersebut [[6]](https://www.ibm.com/topics/random-forest#:~:text=Random%20forest%20is%20a%20commonly,Decision%20trees).
-     
-     <img src="https://user-images.githubusercontent.com/64983961/188504775-b7e4aa9b-f1cd-41ef-8a70-a977db8f3d60.png" alt="Ilustrasi Algoritma Random Forest" title="Ilustrasi Algoritma Random Forest">
-     
-      Setelah dilakukan pelatihan, prediksi untuk sampel yang tidak terlihat ($x'$) dapat dibuat dengan menghitung rata-rata prediksi dari semua pohon setiap individu model pada $x'$ [[7]](https://en.wikipedia.org/wiki/Random_forest#Bagging 'Random Forest - Bagging').
-     $$\hat{f}=\frac{1}{B}\sum_{b=1}^{B} f_b(x^{'})$$
+       * Efektif dalam mengukur kesamaan antara dua objek, tidak terpengaruh oleh ukuran.
+       * Cocok untuk data dengan banyak fitur yang jarang terisi.
+       * Sering digunakan dalam analisis teks dan sistem rekomendasi karena invarian skala.
+         
+  - Kekurangan Penggunaan Cosine Similarity
+ 
+       * Kurang optimal dalam ruang dimensi rendah.
+       * Tidak menangkap makna semantik atau konteks kata.
+       * Mengabaikan urutan kata, yang bisa penting dalam pemahaman makna.
+       * Bisa tidak efisien memori dan menderita dari kutukan dimensionalitas, terutama dalam pengelompokan dokumen besar.
 
-      Kelebihan dari algoritma Random Forest adalah: 
-     - Mengurangi risiko overfitting.
-     - Fleksibilitas dalam menangani tugas regresi dan klasifikasi.
-     - Kemudahan dalam mengevaluasi kepentingan fitur.
-     
-      Sedangkan kelemahan dari algoritma Random Forest adalah: 
-     - Proses yang memakan waktu.
-     - Membutuhkan lebih banyak sumber daya.
-     - Lebih kompleks dalam interpretasi.
-   
-4. **Adaptive Boosting (AdaBoost) Algorithm**  
-   ```python
-   boosting = AdaBoostRegressor(learning_rate=0.05, random_state=55)
-   boosting.fit(X_train, y_train)
-   models.loc['train_mse','Boosting'] = mean_squared_error(y_pred=boosting.predict(X_train), y_true=y_train)
-   ```
-     
-     AdaBoost, yang merupakan kependekan dari *Adaptive Boosting*, merupakan teknik ansambel dalam *machine learning* yang serbaguna, cocok untuk tugas-tugas klasifikasi dan regresi. Sebagai algoritma pembelajaran dengan pengawasan, AdaBoost menggabungkan sejumlah pembelajar dasar, seperti *decision tree*, untuk membentuk model yang lebih kuat. Cara kerja AdaBoost adalah dengan menyesuaikan bobot data latih sesuai dengan keakuratan klasifikasi yang telah dilakukan sebelumnya [[8]](https://www.almabetter.com/bytes/tutorials/data-science/adaboost-algorithm).
-     
-     <img src="https://user-images.githubusercontent.com/64983961/188507801-30224052-cac2-4e99-9c67-2aec18de8e59.png" alt="Ilustrasi Algoritma Adaptive Boosting" title="Ilustrasi Algoritma Adaptive Boosting">
-     
-     Algoritma AdaBoost mengacu kepada metode tertentu untuk melakukan pelatihan *classifier* yang di-*boosted*. Pengklasifikasian tersebut adalah pengklasifikasian dalam bentuk, [[9]](https://en.wikipedia.org/wiki/AdaBoost#Training 'AdaBoost - Training')
-     $$F_T(x)=\sum_{t=q}^{T}f_t(x)$$
-     di mana setiap $F_T$ adalah *learner* yang lemah yang mengambil objek $x$ sebagai input dan mengembalikan nilai yang menunjukkan kelas objek. Demikian juga pada pengklasifikasi $T$ merupakan nilai positif jika sampel berada dalam kelas positif, dan negatif jika sebaliknya.
+**Recommendation Testing**
 
-      Kelebihan dari algoritma AdaBoost adalah: 
-     - Meningkatkan akurasi prediktif.
-     - Adaptif terhadap kasus sulit.
-     - Cepat dan mudah diimplementasikan.
-     - Efektif untuk klasifikasi biner dan multi-kelas.
-     
-      Sedangkan kelemahan dari algoritma AdaBoost adalah: 
-     - Tidak cocok untuk data *noisy*.
-     - Sensitif terhadap *outliers*.
+Hasil pengujian sistem rekomendasi dengan pendekatan *Content-based Recommendation* adalah sebagai berikut.
 
-Ketiga model yang telah dirancang —berdasarkan algoritma K-Nearest Neighbor, Random Forest, dan Adaptive Boosting— akan diuji untuk menentukan mana yang memiliki presisi prediksi paling akurat dan tingkat *error* paling minimal.
+![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/60470a17-5d4d-4619-87b3-83e9c3dd38cd)
 
-# Evaluation
+Di atas adalah gambar sample buku yang akan dijadikan patokan rekomendasi. Rekomendasi yang diberikan dengan pendekatan **Content-based Recommendation** sebagai berikut
 
-Evaluasi model regresi pada dasarnya cukup mudah dipahami. Pada intinya, sebagian besar metrik evaluasi memiliki prinsip yang serupa. Performa model dianggap baik jika prediksi yang dihasilkan dekat dengan nilai aktual. Sebaliknya, dianggap kurang baik jika jauh dari nilai aktual. Perbedaan antara nilai yang diprediksi dan nilai aktual dikenal sebagai kesalahan prediksi. Oleh karena itu, tujuan utama dari semua metrik adalah untuk mengukur dan meminimalkan kesalahan prediksi tersebut.
+![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/d89a23ad-b57a-4e9d-aeb0-3967975f8635)
 
-```python
-# Terapkan normalisasi pada data numerik dalam X_test agar nilai rata-ratanya menjadi nol dan variansnya satu
-X_test.loc[:, numericalFeatures] = scaler.transform(X_test[numericalFeatures])
-```
+Terlihat bahwa sistem yang dikembangkan mampu memberikan saran beberapa buku berdasarkan masukan judul buku "*Room for a Single Lady*", dengan hasil yang didasarkan pada analisis algoritma sistem. Terlihat bahwa rekomendasi yang dihasilkan merujuk ke penulisa buku yang ada nama Clare, dan menghasilkan satu rekomendasi dengan penulis buku yang sama dengan buku yang telah di baca, yaitu *11 Edward Street* oleh Clare Boylan.
 
-Evaluasi performa tiga model pembelajaran mesin: *K-Nearest Neighbor, Random Forest*, dan *AdaBoost*, pada set data pelatihan dan pengujian dengan mengukur tingkat kesalahan ketiga algoritma tersebut melalui *Mean Squared Error* (MSE).
+### 2. Collaborative Filtering Recommendation
+*Collaborative Filtering Recommendation* adalah teknik yang digunakan dalam sistem rekomendasi untuk memprediksi preferensi atau minat pengguna berdasarkan preferensi atau minat pengguna lain yang serupa. Teknik ini tidak mengandalkan konten item yang direkomendasikan, melainkan pada pola interaksi dan penilaian yang dilakukan oleh pengguna terhadap item-item tersebut [[9]](https://realpython.com/build-recommendation-engine-collaborative-filtering/#what-is-collaborative-filtering ).
 
-$$MSE=\frac{1}{N}\sum_{i=1}^{N} (y_i-y\\_pred_i)^2$$
+![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/f940430f-d326-4202-bcc5-841705218bee)
 
-di mana, nilai $N$ adalah jumlah *dataset*, nilai $y_i$ merupakan nilai sebenarnya, dan $y\\_pred$ yaitu nilai prediksinya.
+- **Data Preparation**
 
-Metode metrik *Mean Squared Error* (MSE) menawarkan keuntungan karena proses perhitungannya yang mudah dan konsepnya yang tidak rumit. Namun, metrik ini memiliki kekurangan, seperti tidak mampu memberikan perbandingan langsung antara hasil prediksi dan situasi nyata, yang dapat mengakibatkan akurasi prediksi yang tidak optimal.
+Dalam *data preparation*, fitur `user_id` dan `isbn` di *dataframe* `ratings` dikonversi menjadi indeks bilangan bulat. Setelah itu, fitur-fitur yang sudah dikonversi ini dipetakan kembali ke dalam *dataframe* `rating` masing-masing.
 
-```python
-mse = pd.DataFrame(columns=['train', 'test'], index=['KNN','RF','Boosting'])
-model_dict = {'KNN': knn, 'RF': RF, 'Boosting': boosting}
-for name, model in model_dict.items():
-    mse.loc[name, 'train'] = mean_squared_error(y_true=y_train, y_pred=model.predict(X_train))/1e3
-    mse.loc[name, 'test'] = mean_squared_error(y_true=y_test, y_pred=model.predict(X_test))/1e3
-```
+![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/bf5424ce-eaac-4009-bc8b-ed1d0c0bc350)
 
-![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/55a480ec-22a7-4981-bf16-14476edbe6fb)
+- **Training Data and Validation Data Split**
 
-Dari data tabel tersebut dapat divisualisasikan pada grafik batang berikut.
+Kemudian kita melakukan pembagian *dataset* dengan rasio 80:20, yaitu 80% untuk data latih (*training data*) dan 20% untuk data uji (*validation data*).
 
-![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/badefcd8-dba2-4baf-b9a5-4cdc64af7dbc)
+![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/7a223708-52ef-45f8-b046-f072ac2059b9)
 
-Berdasarkan diagram yang ditampilkan, dapat diketahui:
-1.   Algoritma *Random Forest* menghasilkan nilai *error* terendah.
-2.   Algoritma *K-Nearest Neighbor* menunjukkan tingkat *error* yang berada di tengah-tengah dibandingkan dengan dua algoritma lain.
-3.   Algoritma *Adaptive Boosting* memiliki tingkat *error* tertinggi.
+- **Model Development and Testing**
 
-Tahap selanjutnya adalah melakukan pengujian prediksi dengan menggunakan harga (*price*) dari data uji (*testing*)
+Hasil pengujian sistem rekomendasi dengan pendekatan *Collaborative Filtering Recommendation* adalah sebagai berikut.
 
-![image](https://github.com/sandysan0/Dicoding-Predictive-Analytics/assets/144081667/10cf7573-5889-4cc9-be1b-c22dbbda09ae)
+![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/8e2c4a59-d4ed-4359-b2f9-65e4a89ca594)
 
-Dapat dilihat prediksi pada model dengan algoritma *K-Nearest Neighbor* memberikan hasi yang paling mendekati dengan nilai `y_true` jika dibandingkan dengan algoritma model yang lainnya.
+Dari informasi yang diberikan, tampaknya sistem telah memilih secara acak seorang pengguna dengan `user_id` **695**. Sistem kemudian mencari buku-buku yang paling disukai oleh pengguna tersebut, yang meliputi:
+*   **Elements of Programming With Perl** karya **Andrew L. Johnson**
+*   **To Catch a Cat** karya **Marian Babson**
+*   **People of the Wolf (The First North Americans series, Book 1)** karya **W. Michael Gear**
+*   **The Door to December** karya **Dean R. Koontz**
 
-Nilai `y_true` sebesar **26594.0** dan nilai prediksi `*K-Nearest Neighbor*` sebesar **24513.1**.
+Setelah itu, sistem akan membandingkan buku-buku dengan penilaian tertinggi dari pengguna ini dengan seluruh katalog buku, kecuali yang sudah dibaca, dan mengurutkan rekomendasi berdasarkan skor tertinggi. Terlihat ada 10 buku yang direkomendasikan oleh sistem. Rekomendasi yang diberikan benar-benar tidak ada kesamaan penulis buku dari buku yang sudah dibaca. Ini menunjukan bahwa rekomendasi dibentuk dari hasil kesamaan para `users` lainnya.
 
-Meskipun diagram `MSE` menunjukan *Random Forest* memiliki error paling kecil dibanding algoritma lainnya, ketika dilakukan pengujian justru *K-Nearest Neighbor* menghasilkan prediksi yang lebih mendekati `y_true`.
+## Evaluation
 
+1. **Content-based Recommendation**  
+   Pada tahap evaluasi untuk model sistem rekomendasi dengan pendekatan berbasis konten (content-based recommendation), metrik akurasi dapat dihitung dengan membagi jumlah buku yang direkomendasikan dengan jumlah buku yang ditulis oleh penulis yang sama, kemudian dikalikan dengan 100.
+
+   $$Accuracy=\frac{\displaystyle\sum_{i=1}^{n} RecommendedBooks_i}{\displaystyle\sum_{i=1}^{n} BooksWithSameAuthor_i} \times 100$$
+
+   ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/747ecd8a-8cf6-4845-ac74-32c09b20817b)
+
+   Menggunakan data pada tahap pemodelan sebelumnya, dengan penulis Clare Boylan, ditemukan bahwa ia menulis 2 buku. Jumlah rekomendasi buku yang dihasilkan, yaitu 1, lalu dibagi dengan 2, lalu dikalikan 100, menghasilkan akurasi 50,00%.
+
+2. **Collaborative Filtering Recommendation**  
+   Berdasarkan model machine learning yang dibangun menggunakan *embedding layer, Adam optimizer,* dan *binary crossentropy loss function,* metrik yang digunakan adalah *Root Mean Squared Error* (RMSE). RMSE dihitung dengan mengambil akar kuadrat dari jumlah kuadrat selisih antara nilai sebenarnya dan nilai prediksi, dibagi dengan jumlah data. Nilai RMSE yang rendah menunjukkan bahwa nilai prediksi mendekati nilai observasi. 
+
+   $$RMSE=\sqrt{\sum^{n}_{i=1} \frac{y_i - y\\_pred_i}{n}}$$
+
+   Di mana, nilai $n$ merupakan jumlah *dataset*, nilai $y_i$ adalah nilai sebenarnya, dan $y\\_pred$ yaitu nilai prediksinya terdahap $i$ sebagai urutan data dalam *dataset*.
+
+   Visualisasi hasil pelatihan dan validasi dari metrik RMSE serta training dan validation loss ditampilkan dalam bentuk grafik plot.
+
+   ![image](https://github.com/sandysan0/Dicoding-Recommendation-System/assets/144081667/f3b1e5df-4f56-476c-b9bc-7dbfdc052425)
+
+## Kesimpulan
+
+Ringkasannya, model rekomendasi buku yang telah dikembangkan berhasil memenuhi kebutuhan pengguna dengan menggabungkan dua pendekatan: *Content-based Recommendation* dan *Collaborative Filtering Recommendation*. Dalam *Collaborative Filtering Recommendation*, penting untuk memiliki data peringkat dari pengguna untuk memahami dan memprediksi preferensi mereka. Sebaliknya, *Content-based Recommendation* tidak bergantung pada peringkat pengguna, tetapi lebih fokus pada analisis fitur-fitur spesifik dari buku itu sendiri.
+
+Dengan memanfaatkan kedua teknik ini, model dapat memberikan saran yang sangat relevan dan personal, karena tidak hanya mempertimbangkan apa yang telah dinikmati oleh pengguna di masa lalu, tetapi juga menemukan pilihan baru yang serupa dengan minat mereka berdasarkan karakteristik buku. Ini menciptakan pengalaman yang kaya dan bervariasi, memungkinkan pengguna untuk menemukan karya-karya baru yang mungkin belum pernah mereka pertimbangkan sebelumnya, sambil tetap sejalan dengan selera pribadi mereka.
+
+---
 ---
 
 ## Referensi
 
-[1] Kihm, A., Vance, C. (2016). "The determinants of equity transmission between the new and used car markets: a hedonic analysis." *J Oper Res Soc* 67, 1250–1258 . https://doi.org/10.1057/jors.2016.16
+[1] Moon, S. J., & Bai, S. Y. (2020). "Components of digital literacy as predictors of youth civic engagement and the role of social media news attention: the case of Korea." *Journal of Children and Media,* 1–17. doi:10.1080/17482798.2020.1728700 
 
-[2] Shen Gongqi, Wang Yansong, & Zhu Qiang. (2011). "New Model for Residual Value Prediction of the Used Car Based on BP Neural Network and Nonlinear Curve Fit." *2011 Third International Conference on Measuring Technology and Mechatronics Automation.* doi:10.1109/icmtma.2011.455 
+[2] Tejedor, S., Cervi, L., Pérez-Escoda, A., & Jumbo, F. T. (2020). "Digital Literacy and Higher Education during COVID-19 Lockdown: Spain, Italy, and Ecuador." *Publications,* 8(4), 48. doi:10.3390/publications8040048 
 
-[3] Andrews, T., & Benzing, C. (2006). "The Determinants of Price in Internet Auctions of Used Cars." *Atlantic Economic Journal,* 35(1), 43–57. doi:10.1007/s11293-006-9045-7 
+[3] Nikou, S., Aavakare, M. (2021). "An assessment of the interplay between literacy and digital Technology in Higher Education." *Educ Inf Technol 26,* 3893–3915. https://doi.org/10.1007/s10639-021-10451-0 
 
-[4] *What is the K-nearest neighbors algorithm?*. IBM. https://www.ibm.com/topics/knn 
+[4] Dogan, O., Tokumaci, S., Hiziroglu, O.A. (2024). "Web-Based Intelligent Book Recommendation System Under Smart Campus Applications." *In: Şen, Z., Uygun, Ö., Erden, C. (eds) Advances in Intelligent Manufacturing and Service System Informatics.* IMSS 2023. Lecture Notes in Mechanical Engineering. Springer, Singapore. https://doi.org/10.1007/978-981-99-6062-0_6
 
-[5] Hussein, S. (2022, February 23). *Mengenal K-nearest neighbor: Algoritma Populer untuk machine learning.* GEOSPASIALIS. https://geospasialis.com/k-nearest-neighbor/ 
+[5] org,  scikit-learn. "Sklearn.feature_extraction.text.TfidfVectorizer". scikit. https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
 
-[6] *What is Random Forest?*. IBM. https://www.ibm.com/topics/random-forest#:~:text=Random%20forest%20is%20a%20commonly,Decision%20trees 
+[6] capitalone. (2021, October 6). "Understanding TF-IDF for Machine Learning." Capital One. https://www.capitalone.com/tech/machine-learning/understanding-tf-idf/ 
 
-[7] Wikimedia Foundation. (2024, March 6). *Random Forest*. Wikipedia. https://en.wikipedia.org/wiki/Random_forest 
+[7] org,  scikit-learn. "Sklearn.metrics.pairwise.cosine_similarity". scikit. https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html
 
-[8] *AdaBoost algorithm in Machine Learning*. AlmaBetter. https://www.almabetter.com/bytes/tutorials/data-science/adaboost-algorithm 
+[8] GfG. (2023, July 15). "Cosine similarity." GeeksforGeeks. https://www.geeksforgeeks.org/cosine-similarity/ 
 
-[9] Wikimedia Foundation. (2024, March 6). *Adaboost*. Wikipedia. https://en.wikipedia.org/wiki/AdaBoost 
+[9] Real Python. (2022, August 18). "Build a recommendation engine with collaborative filtering." https://realpython.com/build-recommendation-engine-collaborative-filtering/#what-is-collaborative-filtering 
