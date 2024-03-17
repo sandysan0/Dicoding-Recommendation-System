@@ -302,7 +302,7 @@ users
 
 """## 4.2 Menggabungkan Data Dengan Fitur ISBN
 
-Fungsi `.concatenate` dari *library* [`numpy`](https://numpy.org) digunakan untuk menggabungkan data ISBN yang terdapat di *dataframe* `df_b` untuk buku dan `df_r` untuk *rating*. Proses ini menyatukan informasi ISBN dari kedua *dataframe* ke dalam satu kolom `isbn`.
+Fungsi `.concatenate` dari *library* [`numpy`](https://numpy.org) digunakan untuk menggabungkan data ISBN yang terdapat di *dataframe* `books` untuk buku dan `rating` untuk *rating*. Proses ini menyatukan informasi ISBN dari kedua *dataframe* ke dalam satu kolom `isbn`.
 """
 
 ISBNAll = np.unique(np.concatenate([books['isbn'].unique(), rating['isbn'].unique()]))
@@ -310,7 +310,7 @@ print('Jumlah Buku berdasarkan ISBN :', len(ISBNAll))
 
 """## 4.3 Menggabungkan Data *User*
 
-Fungsi `.concatenate` dari *library* [`numpy`](https://numpy.org) digunakan untuk menyatukan data `user_id` yang berasal dari *dataframe* `rating` dan *dataframe* `users`. Proses ini menggabungkan kedua set data berdasarkan kolom `user_id`.
+Fungsi *`.concatenate`* dari *library* [*`numpy`*](https://numpy.org) digunakan untuk menyatukan data *`user_id`* yang berasal dari *dataframe* *`rating`* dan *dataframe* *`users`*. Proses ini menggabungkan kedua set data berdasarkan kolom *`user_id`*.
 """
 
 USERAll = np.unique(np.concatenate([rating['user_id'].unique(), users['user_id'].unique()]))
@@ -520,7 +520,7 @@ books[books.book_title.eq(readed_book_title)]
 
 author_recommendations(readed_book_title).drop_duplicates()
 
-"""Terlihat bahwa sistem yang dikembangkan mampu memberikan saran beberapa buku berdasarkan masukan judul buku "*Room for a Single Lady*", dengan hasil yang didasarkan pada analisis algoritma sistem. Terlihat bahwa rekomendasi yang dihasilkan merujuk ke penulisa buku yang ada nama Clare, dan menghasilkan satu rekomendasi dengan penulis buku yang sama dengan buku yang telah di baca, yaitu *11 Edward Street* oleh Clare Boylan.
+"""Terlihat bahwa sistem yang dikembangkan mampu memberikan saran beberapa buku berdasarkan masukan judul buku "*Room for a Single Lady*", dengan hasil yang didasarkan pada analisis algoritma sistem. Terlihat bahwa rekomendasi yang dihasilkan merujuk ke penulis buku yang ada nama Clare, dan menghasilkan satu rekomendasi dengan penulis buku yang sama dengan buku yang telah di baca, yaitu *11 Edward Street* oleh Clare Boylan.
 
 ## 6.2 *Collaborative Filtering Recommendation*
 
